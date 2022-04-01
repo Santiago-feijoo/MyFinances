@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">MyFinances</string>
+    <string name="mis_finanzas">Mis Finanzas</string>
+
+    <string name="bienvenido">Bienvenido</string>
+
+    <string name="nombre_de_usuario">Nombre de usuario</string>
+    <string name="clave">Contraseña</string>
+    <string name="iniciar_sesion">Iniciar sesión</string>
+    <string name="olvidaste_tu_contraseña">¿Olvidaste tu contraseña?</string>
+
+    <string name="alerta_username_login">Debe digitar el nombre de usuario o número de documento</string>
+    <string name="alerta_clave">Debe digitar la contraseña</string>
+
+    <string name="correo_electronico">Correo electrónico</string>
+</resources>
