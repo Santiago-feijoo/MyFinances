@@ -5,13 +5,10 @@ import android.os.Bundle
 import com.example.myfinances.databinding.ActivityMenuBinding
 
 class MenuActivity : AppCompatActivity() {
-
-    /// ATRIBUTOS ///
-
+    /** ATRIBUTOS **/
     private lateinit var binding: ActivityMenuBinding
 
-    /// METODOS ///
-
+    /** METODOS **/
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 

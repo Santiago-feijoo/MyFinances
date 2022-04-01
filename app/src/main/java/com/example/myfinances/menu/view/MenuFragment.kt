@@ -11,13 +11,11 @@ import com.example.myfinances.R
 import com.example.myfinances.databinding.FragmentMenuBinding
 
 class MenuFragment : Fragment() {
-
-    /// ATRIBUTOS ///
+    /** ATRIBUTOS **/
     private lateinit var binding: FragmentMenuBinding
     private lateinit var navController: NavController
 
-    /// METODOS ///
-
+    /** METODOS **/
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 

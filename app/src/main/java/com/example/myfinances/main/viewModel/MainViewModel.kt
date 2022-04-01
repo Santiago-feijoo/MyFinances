@@ -35,14 +35,17 @@ class MainViewModel @Inject constructor(private val repository: MainRepository):
 
     override fun incorrectUsername(response: Boolean) {
         _incorrectUsername.postValue(response)
+
     }
 
     override fun incorrectPassword(response: Boolean) {
         _incorrectPassword.postValue(response)
+
     }
 
     override fun responseLogin(response: Boolean) {
         _responseLogin.postValue(response)
+
     }
 
 }

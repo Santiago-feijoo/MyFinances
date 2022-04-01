@@ -5,9 +5,8 @@ import android.graphics.PorterDuff
 import android.widget.Toast
 
 class Tools {
-
     /** ATRIBUTOS **/
-    final val TAG: String = this.javaClass.name
+    final val className: String = this.javaClass.name
 
     /** METODOS **/
     fun alert(alertType: String, message: String, duration: Int, context: Context) {

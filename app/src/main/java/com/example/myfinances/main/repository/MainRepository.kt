@@ -1,8 +1,6 @@
 package com.example.myfinances.main.repository
 
-import android.content.Context
 import com.example.myfinances.main.response.MainResponse
-import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import javax.inject.Inject
