@@ -1,4 +1,4 @@
-package com.example.myfinances.menu.view
+package com.example.myfinances.menu
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,8 +9,10 @@ import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
 import com.example.myfinances.R
 import com.example.myfinances.databinding.FragmentMenuBinding
+import dagger.hilt.android.AndroidEntryPoint
 
-class MenuFragment : Fragment() {
+@AndroidEntryPoint
+class MenuFragment: Fragment() {
     /** ATRIBUTOS **/
     private lateinit var binding: FragmentMenuBinding
     private lateinit var navController: NavController

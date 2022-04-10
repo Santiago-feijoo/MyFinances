@@ -1,12 +1,19 @@
-package com.example.myfinances.main.repository
+package com.example.myfinances.main
 
-import com.example.myfinances.main.response.MainResponse
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
-class MainRepository @Inject constructor(private val response: MainResponse) {
+class MainRepository @Inject constructor() {
+    /** ATRIBUTOS **/
+    private lateinit var response: MainResponse
+
     /** METODOS **/
+    fun setInterface(response: MainResponse) {
+        this.response = response
+
+    }
+
     suspend fun validateLogin(username: String, password: String) {
         withContext(Dispatchers.IO) {
             when {

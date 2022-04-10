@@ -1,19 +1,24 @@
-package com.example.myfinances.main.viewModel
+package com.example.myfinances.main
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.myfinances.main.repository.MainRepository
-import com.example.myfinances.main.response.MainResponse
+import com.example.myfinances.main.MainRepository
+import com.example.myfinances.main.MainResponse
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
 @HiltViewModel
-class MainViewModel @Inject constructor(private val repository: MainRepository): ViewModel(), MainResponse {
+class MainViewModel @Inject constructor(private val repository: MainRepository): ViewModel(),
+    MainResponse {
+    init {
+        repository.setInterface(this)
+
+    }
+
     /** ATRIBUTOS **/
     val incorrectUsername: LiveData<Boolean> get() = _incorrectUsername
     private val _incorrectUsername = MutableLiveData<Boolean>()

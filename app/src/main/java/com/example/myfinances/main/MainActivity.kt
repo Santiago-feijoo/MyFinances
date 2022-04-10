@@ -1,4 +1,4 @@
-package com.example.myfinances.main.view
+package com.example.myfinances.main
 
 import android.content.Context
 import android.content.Intent
@@ -8,18 +8,17 @@ import android.util.AttributeSet
 import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
-import com.example.myfinances.menu.view.MenuActivity
+import com.example.myfinances.menu.MenuActivity
 import com.example.myfinances.R
-import com.example.myfinances.Tools
+import com.example.myfinances.utils.Tools
 import com.example.myfinances.databinding.ActivityMainBinding
-import com.example.myfinances.main.viewModel.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     /** ATRIBUTOS **/
-    private val viewModel: MainViewModel by viewModels()
     private lateinit var binding: ActivityMainBinding
+    private val viewModel: MainViewModel by viewModels()
 
     /** METODOS **/
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,12 +27,8 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-    }
-
-    override fun onCreateView(parent: View?, name: String, context: Context, attrs: AttributeSet): View? {
-        return super.onCreateView(parent, name, context, attrs)
-
         initListener()
+        observer()
 
     }
 
@@ -48,18 +43,20 @@ class MainActivity : AppCompatActivity() {
 
     private fun observer() {
         viewModel.incorrectUsername.observe(this) { response ->
-            if(!response) {
+            if(response) {
                 binding.buttonLogin.isEnabled = true
-                binding.editTextUsername.error = getString(R.string.alerta_username_login)
+                binding.layoutUsername.error = getString(R.string.alerta_username_login)
+                binding.layoutPassword.error = ""
 
             }
 
         }
 
         viewModel.incorrectPassword.observe(this) { response ->
-            if(!response) {
+            if(response) {
                 binding.buttonLogin.isEnabled = true
-                binding.editTextPassword.error = getString(R.string.alerta_clave)
+                binding.layoutUsername.error = ""
+                binding.layoutPassword.error = getString(R.string.alerta_clave)
 
             }
 
@@ -79,7 +76,7 @@ class MainActivity : AppCompatActivity() {
         intent = Intent(this, MenuActivity::class.java)
         startActivity(intent)
 
-        Tools().alert("success", "¡${getString(R.string.bienvenido)}!", Toast.LENGTH_SHORT, this.applicationContext)
+        Toast.makeText(this, "¡${getString(R.string.bienvenido)}!", Toast.LENGTH_SHORT).show()
 
     }
 

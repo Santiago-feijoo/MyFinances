@@ -1,4 +1,4 @@
-package com.example.myfinances.main.response
+package com.example.myfinances.main
 
 interface MainResponse {
     /** FIRMAS **/

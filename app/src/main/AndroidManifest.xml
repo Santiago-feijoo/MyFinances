@@ -11,9 +11,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyFinances">
         <activity
-            android:name=".main.view.MainActivity"
+            android:name=".signin.SignInActivity"
+            android:exported="false" />
+        <activity
+            android:name=".main.MainActivity"
             android:exported="true"
-            android:screenOrientation="portrait">
+            android:screenOrientation="fullSensor">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,8 +24,9 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".menu.view.MenuActivity"
-            android:exported="false" android:parentActivityName=".main.view.MainActivity" />
+            android:name=".menu.MenuActivity"
+            android:exported="false"
+            android:parentActivityName=".main.MainActivity" />
     </application>
 
 </manifest>

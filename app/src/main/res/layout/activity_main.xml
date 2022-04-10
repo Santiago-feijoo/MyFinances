@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".main.view.MainActivity">
+    tools:context=".main.MainActivity">
 
     <ImageView
         android:id="@+id/imageView_login"
@@ -12,8 +12,9 @@
         android:layout_height="wrap_content"
         android:layout_margin="32dp"
         android:adjustViewBounds="true"
-
         android:src="@drawable/logo_finance"
+        android:contentDescription="@string/logo"
+
         app:layout_constraintBottom_toTopOf="@id/layout_username"
         app:layout_constraintEnd_toEndOf="@id/layout_username"
         app:layout_constraintStart_toStartOf="@id/layout_username"
@@ -94,5 +95,28 @@
         app:layout_constraintEnd_toEndOf="@id/button_login"
         app:layout_constraintStart_toStartOf="@id/button_login"
         app:layout_constraintTop_toBottomOf="@id/button_login" />
+
+    <TextView
+        android:id="@+id/textView_dont_have_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/no_tienes_una_cuenta"
+
+        app:layout_constraintStart_toStartOf="@id/textView_forgotten_password"
+        app:layout_constraintTop_toBottomOf="@id/textView_forgotten_password"
+        app:layout_constraintEnd_toEndOf="@id/textView_forgotten_password"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/textView_create_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/crear_cuenta"
+        android:textColor="@color/blue_dark"
+        android:textStyle="bold"
+
+        app:layout_constraintStart_toStartOf="@id/textView_dont_have_account"
+        app:layout_constraintTop_toBottomOf="@id/textView_dont_have_account"
+        app:layout_constraintEnd_toEndOf="@id/textView_dont_have_account"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

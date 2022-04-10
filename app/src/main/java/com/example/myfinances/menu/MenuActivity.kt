@@ -1,10 +1,12 @@
-package com.example.myfinances.menu.view
+package com.example.myfinances.menu
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.myfinances.databinding.ActivityMenuBinding
+import dagger.hilt.android.AndroidEntryPoint
 
-class MenuActivity : AppCompatActivity() {
+@AndroidEntryPoint
+class MenuActivity: AppCompatActivity() {
     /** ATRIBUTOS **/
     private lateinit var binding: ActivityMenuBinding
 
