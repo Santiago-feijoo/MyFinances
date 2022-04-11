@@ -12,6 +12,7 @@ import com.example.myfinances.menu.MenuActivity
 import com.example.myfinances.R
 import com.example.myfinances.utils.Tools
 import com.example.myfinances.databinding.ActivityMainBinding
+import com.example.myfinances.signin.SignInActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -34,8 +35,13 @@ class MainActivity : AppCompatActivity() {
 
     private fun initListener() {
         binding.buttonLogin.setOnClickListener {
-            binding.buttonLogin.isEnabled = false
+            it.isEnabled = false
             viewModel.validateLogin(binding.editTextUsername.text.toString().trim(), binding.editTextPassword.text.toString().trim())
+
+        }
+
+        binding.textViewCreateAccount.setOnClickListener {
+            openSignIn()
 
         }
 
@@ -77,6 +83,12 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
 
         Toast.makeText(this, "¡${getString(R.string.bienvenido)}!", Toast.LENGTH_SHORT).show()
+
+    }
+
+    private fun openSignIn() {
+        intent = Intent(this, SignInActivity::class.java)
+        startActivity(intent)
 
     }
 

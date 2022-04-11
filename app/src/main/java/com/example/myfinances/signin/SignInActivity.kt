@@ -18,6 +18,17 @@ class SignInActivity: AppCompatActivity() {
         binding = ActivitySignInBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        initListener()
+
+    }
+
+    private fun initListener() {
+        binding.toolbarSignIn.setNavigationOnClickListener {
+            it.isEnabled = false
+            this.finish()
+
+        }
+
     }
 
 }

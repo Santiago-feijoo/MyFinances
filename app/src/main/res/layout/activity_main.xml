@@ -24,9 +24,9 @@
         android:id="@+id/textView_title_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/mis_finanzas"
+        android:fontFamily="@font/comfortaa_bold"
         android:textSize="32sp"
-        android:textStyle="bold"
+        android:text="@string/mis_finanzas"
 
         app:layout_constraintEnd_toEndOf="@id/imageView_login"
         app:layout_constraintStart_toStartOf="@id/imageView_login"
@@ -47,7 +47,8 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editText_username"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:fontFamily="@font/comfortaa_light">
 
         </com.google.android.material.textfield.TextInputEditText>
 
@@ -69,6 +70,7 @@
             android:id="@+id/editText_password"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:fontFamily="@font/comfortaa_light"
             android:inputType="textPassword" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -77,11 +79,13 @@
         android:id="@+id/button_login"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:padding="12dp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:textSize="16sp"
         android:text="@string/iniciar_sesion"
-
+        android:padding="12dp"
         android:textAllCaps="false"
+
+        android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="@id/layout_password"
         app:layout_constraintStart_toStartOf="@id/layout_password"
         app:layout_constraintTop_toBottomOf="@id/layout_password" />
@@ -90,6 +94,8 @@
         android:id="@+id/textView_forgotten_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/comfortaa_light"
+        android:textSize="16sp"
         android:text="@string/olvidaste_tu_contraseña"
 
         app:layout_constraintEnd_toEndOf="@id/button_login"
@@ -100,6 +106,8 @@
         android:id="@+id/textView_dont_have_account"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/comfortaa_light"
+        android:textSize="16sp"
         android:text="@string/no_tienes_una_cuenta"
 
         app:layout_constraintStart_toStartOf="@id/textView_forgotten_password"
@@ -111,9 +119,10 @@
         android:id="@+id/textView_create_account"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/crear_cuenta"
+        android:fontFamily="@font/comfortaa_bold"
         android:textColor="@color/blue_dark"
-        android:textStyle="bold"
+        android:textSize="16sp"
+        android:text="@string/crear_cuenta"
 
         app:layout_constraintStart_toStartOf="@id/textView_dont_have_account"
         app:layout_constraintTop_toBottomOf="@id/textView_dont_have_account"

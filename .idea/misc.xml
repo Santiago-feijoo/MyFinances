@@ -3,8 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/57310/AndroidStudioProjects/MyFinances/app/src/main/res/font/font.xml" value="0.17993311036789297" />
         <entry key="..\:/Users/57310/AndroidStudioProjects/MyFinances/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Users/57310/AndroidStudioProjects/MyFinances/app/src/main/res/layout/activity_menu.xml" value="0.15304054054054053" />
+        <entry key="..\:/Users/57310/AndroidStudioProjects/MyFinances/app/src/main/res/layout/activity_sign_in.xml" value="0.2" />
         <entry key="..\:/Users/57310/AndroidStudioProjects/MyFinances/app/src/main/res/layout/fragment_menu.xml" value="0.2" />
       </map>
     </option>
