@@ -45,6 +45,7 @@
         android:id="@+id/scroll_data"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:fillViewport="true"
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/toolbarSignIn"
@@ -87,14 +88,15 @@
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/layout_types_of_document"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-                        android:layout_width="match_parent"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:hint="@string/tipo_de_documento"
 
                         android:layout_margin="16dp"
+                        app:layout_constraintHorizontal_weight="0.45"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/textView_basic_data"
-                        app:layout_constraintEnd_toEndOf="parent">
+                        app:layout_constraintEnd_toStartOf="@id/layout_number_of_document">
 
                         <com.google.android.material.textfield.MaterialAutoCompleteTextView
                             android:id="@+id/list_types_of_document"
@@ -113,10 +115,11 @@
                         android:layout_height="wrap_content"
                         android:hint="@string/numero_de_documento"
 
-                        android:layout_marginVertical="8dp"
-                        app:layout_constraintStart_toStartOf="@id/layout_types_of_document"
-                        app:layout_constraintTop_toBottomOf="@id/layout_types_of_document"
-                        app:layout_constraintEnd_toEndOf="@id/layout_types_of_document">
+                        android:layout_marginEnd="16dp"
+                        app:layout_constraintHorizontal_weight="1"
+                        app:layout_constraintStart_toEndOf="@id/layout_types_of_document"
+                        app:layout_constraintTop_toTopOf="@id/layout_types_of_document"
+                        app:layout_constraintEnd_toEndOf="parent">
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/editText_number_of_document"
@@ -136,7 +139,7 @@
                         android:hint="@string/primer_nombre"
 
                         android:layout_marginTop="8dp"
-                        app:layout_constraintStart_toStartOf="@id/layout_number_of_document"
+                        app:layout_constraintStart_toStartOf="@id/layout_types_of_document"
                         app:layout_constraintTop_toBottomOf="@id/layout_number_of_document"
                         app:layout_constraintEnd_toEndOf="@id/layout_number_of_document">
 
@@ -167,6 +170,83 @@
                             android:layout_height="match_parent"
                             android:fontFamily="@font/comfortaa_light"
                             android:textSize="16sp"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardView_user_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="8dp"
+
+                android:layout_margin="16dp"
+                app:layout_constraintStart_toStartOf="@id/cardView_basic_data"
+                app:layout_constraintTop_toBottomOf="@id/cardView_basic_data"
+                app:layout_constraintEnd_toEndOf="@id/cardView_basic_data">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView_user_data"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/comfortaa_bold"
+                        android:textSize="22sp"
+                        android:text="@string/datos_de_usuario"
+
+                        android:layout_margin="16dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layout_username"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/nombre_de_usuario"
+
+                        android:layout_margin="16dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/textView_user_data"
+                        app:layout_constraintEnd_toEndOf="parent">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/comfortaa_light"
+                            android:textSize="16sp"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layout_password"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:endIconMode="password_toggle"
+                        android:hint="@string/clave"
+
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="16dp"
+                        app:layout_constraintStart_toStartOf="@id/layout_username"
+                        app:layout_constraintTop_toBottomOf="@id/layout_username"
+                        app:layout_constraintEnd_toEndOf="@id/layout_username"
+                        app:layout_constraintBottom_toBottomOf="parent">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/comfortaa_light"
+                            android:textSize="16sp"
+                            android:inputType="textPassword" />
 
                     </com.google.android.material.textfield.TextInputLayout>
 

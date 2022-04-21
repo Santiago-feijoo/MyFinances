@@ -61,6 +61,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
 
+        app:endIconMode="password_toggle"
         android:hint="@string/clave"
         app:layout_constraintEnd_toEndOf="@id/layout_username"
         app:layout_constraintStart_toStartOf="@id/layout_username"
@@ -94,7 +95,7 @@
         android:id="@+id/textView_forgotten_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/comfortaa_light"
+        android:fontFamily="@font/comfortaa_bold"
         android:textSize="16sp"
         android:text="@string/olvidaste_tu_contraseña"
 
